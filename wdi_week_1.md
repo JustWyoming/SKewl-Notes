@@ -138,7 +138,10 @@
 * `Math.random();` returns a random number
 * `Math.random()*10;` multiplies random number by 10
 * `parseInt(Math.random()*10);` gives the number multiplied by 10 to the closest whole number
-* 
+
+test
+
+
 
 
 

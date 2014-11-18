@@ -138,9 +138,56 @@
 * `Math.random();` returns a random number
 * `Math.random()*10;` multiplies random number by 10
 * `parseInt(Math.random()*10);` gives the number multiplied by 10 to the closest whole number
+* ` var c = a.concat( b );` method to combine two arrays
+* `var a = foods.indexOf("Pho") -1;` indexOf is a method to call a specific item from an array. In the example above it has -1 to get the rank number properly to account for the 0 position in the index
+* `foods.splice(foods.indexOf("Donuts"));` finds index of Donuts and removes it (specific index in array and remove)
+* `var selects = foods.slice(4,10);` creates a new array from foods array and selects just the indexes indicated
+* `var people = {
+  'Moe' : 18,
+  'Larry' : 19,
+  'Curly' : 20,
+  'Jane' : 20,
+  'Emma' : 21,
+  'Elizabeth' : 18,
+  'Elinor' : 23,
+  'Mary' : 25,
+  'Darcy' : 24,
+  'Grey' : 18,
+  'Lydia' : 24,
+  'Harriet' : 18
+};` creates an object called people with multiple keys and values
+* Function for median of an array 
 
-test
+###Javascript Exercises:
+* to create a new test js file in sublime `subl test.js`
+* type some text and save and run `ls' to see the file appear in your working directory
+* `console.log("hello World!");` in your test.js file and save
+* in terminal `node test.js` returns our "Hello World" string
+* add `var person = {firstName:"Jane",lastName:"Doe"};
+console.log("hello " +person.firstName+"!");` to test.js and save
+* back in terminal run `node test.js` again to display "hello Jane!"
 
+###Day 2 Exercise:
+* Function for median of an array :
+
+```
+
+var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
+
+	function median(ages) {
+		ages.sort( function(a,b) {return a - b;});
+
+		var half = Math.floor(ages.length/2);
+
+		if(ages.length % 2)
+			return ages[half];
+		else
+			return (ages[half-1] + ages[half]) /2.0; }
+
+var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
+
+console.log(median(ages));
+```
 
 
 

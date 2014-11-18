@@ -18,6 +18,8 @@ var friends = [
     friends.unshift("Bert");
     
     friends[6]="Liz";
+    // or you can do 
+    friends[friends.indexOf("Elizabeth")] = "Liz"
 
     friends.sort();
     
@@ -79,13 +81,13 @@ var yourFriends = [
               'Pizza'
             ];
 
-        var a = foods.indexOf("Pho") -1;
+        var a = foods.indexOf("Pho") +1;
 
         var a = foods.indexOf("Donuts");
 
-        foods.splice(foods.indexOf("Donuts"));
+        foods.splice(foods.indexOf("Donuts"),1);
 
-        var selects = foods.slice(4,10);
+        var selects = foods.slice(4,9);
 
   var people = {
   'Moe' : 18,
@@ -102,21 +104,20 @@ var yourFriends = [
   'Harriet' : 18
 };
 
-
-    var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
+var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
 
     function median(ages) {
         ages.sort( function(a,b) {return a - b;});
 
-        var half = Math.floor(ages.length/2);
+        var half = Math.ceil(ages.length/2);
 
         if(ages.length % 2)
-                return ages[half];
-            else
-                return (ages[half-1] + ages[half]) / 2.0;
+            return ages[half];
+        else
+            return (ages[half-1] + ages[half]) /2.0; }
 
-    }
-     var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
+var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
+
+console.log(median(ages));
 
 
-    console.log(median(ages));

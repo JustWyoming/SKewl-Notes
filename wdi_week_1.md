@@ -36,6 +36,8 @@
 * brew installed `trash` feature that moves files to the trash when you use the trash command, so you can make sure you do not rm a file you need on accident
 * `clear` clears the screen
 * `history` brings up your history. you can make it further specific to make it shorter and more concise ex: `history | git` brings up anything in my history that has git in it
+* `cmd d` splits screen in terminal vertically
+* `shift cmd d` splits screen horizontally
 
 
 ###Git and GitHub History
@@ -71,6 +73,7 @@
 * added repo from web client with `JustWyoming.github.io` address
 * uploaded about me doc we created pre-class
 * committed files and pushed to new repo
+
 
 #WDI Week 1
 
@@ -138,8 +141,21 @@
 * `Math.random();` returns a random number
 * `Math.random()*10;` multiplies random number by 10
 * `parseInt(Math.random()*10);` gives the number multiplied by 10 to the closest whole number
+
+
+###Javascript Exercises:
+* to create a new test js file in sublime `subl test.js`
+* type some text and save and run `ls' to see the file appear in your working directory
+* `console.log("hello World!");` in your test.js file and save
+* in terminal `node test.js` returns our "Hello World" string
+* add `var person = {firstName:"Jane",lastName:"Doe"};
+console.log("hello " +person.firstName+"!");` to test.js and save
+* back in terminal run `node test.js` again to display "hello Jane!"
+
+###Day 2 Exercise (new functions and methods):
+
 * ` var c = a.concat( b );` method to combine two arrays
-* `var a = foods.indexOf("Pho") -1;` indexOf is a method to call a specific item from an array. In the example above it has -1 to get the rank number properly to account for the 0 position in the index
+* `var a = foods.indexOf("Pho") +1;` indexOf is a method to call a specific item from an array. In the example above it has +1 to get the rank number properly to account for the 0 position in the index
 * `foods.splice(foods.indexOf("Donuts"));` finds index of Donuts and removes it (specific index in array and remove)
 * `var selects = foods.slice(4,10);` creates a new array from foods array and selects just the indexes indicated
 * `var people = {
@@ -155,19 +171,8 @@
   'Grey' : 18,
   'Lydia' : 24,
   'Harriet' : 18
-};` creates an object called people with multiple keys and values
-* Function for median of an array 
-
-###Javascript Exercises:
-* to create a new test js file in sublime `subl test.js`
-* type some text and save and run `ls' to see the file appear in your working directory
-* `console.log("hello World!");` in your test.js file and save
-* in terminal `node test.js` returns our "Hello World" string
-* add `var person = {firstName:"Jane",lastName:"Doe"};
-console.log("hello " +person.firstName+"!");` to test.js and save
-* back in terminal run `node test.js` again to display "hello Jane!"
-
-###Day 2 Exercise:
+};`
+creates an object called people with multiple keys and values
 * Function for median of an array :
 
 ```
@@ -177,7 +182,7 @@ var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1
 	function median(ages) {
 		ages.sort( function(a,b) {return a - b;});
 
-		var half = Math.floor(ages.length/2);
+		var half = Math.ceil(ages.length/2);
 
 		if(ages.length % 2)
 			return ages[half];
@@ -189,7 +194,8 @@ var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1
 console.log(median(ages));
 ```
 
-
+* `sort(function(a,b));` gives number arrays a real in order sort versus 1, 10, 2, 22, 3, 4, etc.
+* 
 
 
 

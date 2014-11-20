@@ -130,7 +130,7 @@
 * `s.substr(1, 4);` brings you 4 characters but shifts the position to the first
 * `var num = "3.14"` makes a string called num
 * `num` returns the string `'3.14'`
-* `parseInt(num);` turns it into a number rather than a string
+* `parseInt(num);` turns it into a number rather than a string - the characters in the string become the integer, ex: "blue" is an integer of 4, "cats and dogs" is an integer of 13
 * so when you run`num` you get 3
 * `parseFloat(num);` brings the whole number not rounded to the integer
 * Object called Math in Javascript
@@ -195,7 +195,109 @@ console.log(median(ages));
 ```
 
 * `sort(function(a,b));` gives number arrays a real in order sort versus 1, 10, 2, 22, 3, 4, etc.
-* 
+
+##Afternoon Session
+### More Javascript Syntax
+
+* boolean is equal to in js is `===` not two
+* "truthy" value exists with a value that is not false `var thing = "1"
+if (thing) {
+	console.log("this is true");
+}` returns true
+* JS has truthy and falsey values. ` false, 0, "", NaN, undefined `are types of falsey values. everything else is truthy
+* `NaN` means not a number
+* if / else looks in simple format : 
+
+```
+if (thing === "Lenny") {
+	console.log("this is true");
+}
+else {
+	console.log("Not Lenny")
+};
+```
+
+* if else if else loop: 
+
+
+```
+if (thing === "Lenny") {
+	console.log("this is true");
+}
+else {
+	console.log("Not Lenny")
+};
+```
+
+* while loop ex: 
+
+
+```
+while (true) {
+	console.log("Hello!");
+}
+```
+
+* for loops:
+
+
+```
+// for loop takes 3 parameters: for (initial value, condition; increment) {} 
+// whatever is in the for loop will be run multiple times for loop = xtimes
+// whatever is passed  will repeat xtimes based on initial for statement
+
+// counter = 0 is less than foods.length - which is true - so if it's true print to console food[index item] (which is counter)
+// then it repeats until it's no longer true
+// counter++ adds 1 you can also do it as counter = counter + 1 or counter + 2
+// counter could be called i or j or something, but it represents the index # of an array
+// followed by the incrementer statement ex: counter = counter + 2
+
+var foods = ["burgers", "tacos", "icecream"]
+
+for (var counter = 0; counter < foods.length; counter++) {
+	console.log(foods[counter], "is awesome");
+}
+```
+
+
+#WDI Week 1
+##Day 3
+
+###Review JS Control Flow Homework
+
+* reviewed homework as a group
+* a shorter if else to use in simple applications, such as in the pluralizer exercise: `var s = (count = 1) ? "" : "s";`
+* objects in key value pairs (including nested object key values) can be called with a `.yam` for example: `var phonebook = {"Yam": "555-555-5555"}`
+
+### Afternoon Exercises
+* downloaded the Json viewer for google chrome so we can see the file parsed out cleanly in the browser
+* we are iterating through objects with nested objects to  return specific results. We are mostly using for loops, calling on key value pairs of nested objects.
+
+
+example:
+
+```
+// 3.) Find all items with more than one image link.
+var data = require("./products.json")
+var multipleImageItems = [];
+	for (var i = 0; i < data.items.length; i+=1) {
+			if (data.items[i].product.images.length > 1) {
+				multipleImageItems.push([data.items[i].product.googleId, data.items[i].product.images.length]);
+			}
+	}
+	console.log(multipleImageItems);
+// we used part of same for loop to determine the length of the data we want to filter
+//we made an if statement that called up items with images that had an array with more than 1 result
+// we pushed that data to our new empty array, with the googleID to identify the specific product with
+// multiple images
+``` 
+* the for loop counts all the items in the required variable 'data' and returns the length (or the amount of items within the data variable). 
+* we added an if statement to our for loop that called all the items which had images within an array that were greater than 1 image ea. (these are the nested objects in the image key/value which is nested inside of product which is nested within items).
+* the results of our query were pushed into our new array , along with the googleID of the product to identify it.
+
+ 
+
+
 
 
 
